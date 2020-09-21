@@ -1,0 +1,96 @@
+.floatingQr{
+    position: fixed;
+    left: 2rem;
+    top: 5rem;
+}
+
+.horizontal{
+    display: flex;
+    flex-direction: row
+}
+.colorPicker{
+    padding: 1rem 1rem 1rem 0;
+}
+
+.button{
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    border-color: #444;
+    min-width: 10rem;
+    cursor:pointer;
+    margin-top: 1rem;
+}
+.button:hover{
+
+    background-color: #eaeaea;
+    border-color: #000;
+}
+
+.smallButton{
+    padding: .3rem;
+    background-color: #fff;
+    border-radius: 3px;
+    border-color: #444;
+    min-width: 5rem;
+    cursor:pointer;
+    margin-top: 1rem;
+}
+.smallButton:hover{
+    background-color: #eaeaea;
+    border-color: #000;
+}
+
+.textInput{
+    padding: 1rem;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: #444;
+    min-width: 10rem;
+}
+
+.AdvancedOptions{
+    overflow: hidden;
+    max-height: 0px;
+    margin: 1rem;
+    transition: max-height 1s;
+}
+.AdvancedOptionsOpen{
+    max-height: 200vh;
+}
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted #444; /* If you want dots under the hoverable text */
+    margin-top: 0.5rem;
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 35rem;
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  .shown{
+      display: visible;
+  }
+  .hidden{
+      display: none;
+  }

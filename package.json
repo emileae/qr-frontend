@@ -4,12 +4,39 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "build": "next build && next export",
+    "start": "next start",
+    "test": "jest"
   },
   "dependencies": {
+    "@apollo/client": "^3.2.0",
+    "@apollo/react-hooks": "3.1.5",
+    "@apollo/react-ssr": "3.1.5",
+    "@babel/plugin-transform-react-jsx": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.0.4",
+    "apollo-boost": "0.4.7",
+    "apollo-link-error": "^1.1.13",
+    "canvas": "^2.6.1",
+    "graphql": "^15.3.0",
+    "jest": "^26.4.2",
     "next": "9.5.3",
+    "next-apollo": "3.1.10",
+    "qrcode.react": "^1.0.0",
     "react": "16.13.1",
+    "react-color": "^2.18.1",
     "react-dom": "16.13.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^7.24.2",
+    "babel-jest": "^26.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest-dom": "^4.0.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }

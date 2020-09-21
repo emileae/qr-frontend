@@ -1,65 +1,30 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.css';
+import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <h2 className={styles.action}>
+        <Link href="/create" className={styles.button} style={{borderBottom: "2px solid #000"}}> Lets make some qr codes!!!!</Link>
+      </h2>
+      <div>
+        see some test runs <Link href="/qrs"><span style={{textDecoration: "underline", cursor: "pointer"}}>here</span></Link>.
+      </div>
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+      <p>
+        This is a small test project to try see if I still remember some nextJS/graphql concepts.
+        <br/>
+        <br/>
+        Some features
+        <ul>
+          <li>Type something to generate a QR code</li>
+          <li>Customize size and color</li>
+          <li>Save in svg format to a PostgreSQL database</li>
+          <li>Uses apollo client</li>
+        </ul>
+      </p>
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
     </div>
   )
 }
